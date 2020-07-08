@@ -26,7 +26,6 @@ class Credentials:
     @classmethod
     def delete_credentials(cls, account_type):
         for index, xxx in enumerate(cls.credential_list):
-            print(f" From loop: {xxx.account_type}, from user: {account_type}")
             if xxx.account_type == account_type:
                 Credentials.credential_list.pop(index)
             else:    
