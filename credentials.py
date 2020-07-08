@@ -22,3 +22,13 @@ class Credentials:
         method that returns the credential list
         """
         return cls.credential_list
+
+    @classmethod
+    def delete_password(cls, username):
+        for index, password in enumerate(cls.user_list):
+            if password.username == username:
+                print(index)
+                return Password.user_list.pop(index)
+            else:
+                print("Username not found")
+                return "Username not found!"

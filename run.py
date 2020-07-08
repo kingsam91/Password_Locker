@@ -46,8 +46,11 @@ def display_user_cred():
     '''
     return Credentials.display_credentials()
 
-# def del_user_cred():
-
+def del_user_cred(account_type):
+    '''
+    Function that deletes credentials using account type
+    '''
+    return Credentials.del
 
 
 def main():
@@ -114,7 +117,7 @@ def main():
                 print("You dont seem to have any credentials saved yet")
                 print('\n')
 
-                )
+                
 
 
 if __name__ == '__main__':
