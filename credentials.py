@@ -24,11 +24,14 @@ class Credentials:
         return cls.credential_list
 
     @classmethod
-    def delete_password(cls, username):
-        for index, password in enumerate(cls.user_list):
-            if password.username == username:
-                print(index)
-                return Password.user_list.pop(index)
-            else:
-                print("Username not found")
-                return "Username not found!"
+    def delete_credentials(cls, account_type):
+        for index, xxx in enumerate(cls.credential_list):
+            print(f" From loop: {xxx.account_type}, from user: {account_type}")
+            if xxx.account_type == account_type:
+                Credentials.credential_list.pop(index)
+            else:    
+                print("Credentials not found")
+            return Credentials.credential_list    
+            # else:
+            #     print("Credentials not found")
+            #     return "Credentials not found!"

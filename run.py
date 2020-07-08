@@ -50,7 +50,7 @@ def del_user_cred(account_type):
     '''
     Function that deletes credentials using account type
     '''
-    return Credentials.del
+    return Credentials.delete_credentials(account_type)
 
 
 def main():
@@ -59,7 +59,7 @@ def main():
 
     while True:
 
-        print("Use these short codes : cu - create a new user, cc - create user credentials, dc - display user credentials, dl - delete user, exit -exit the user list ")
+        print("Use these short codes : cu - create a new user, cc - create user credentials, dc - display user credentials, dl - delete user credentials, exit -exit the user list ")
 
         short_code = input().lower()
 
@@ -68,7 +68,8 @@ def main():
             break
 
         if short_code == "cu":
-            print("create user")
+            print("Create user")
+            print("\n")
 
             print("First name")
             first_name = input()
@@ -86,12 +87,13 @@ def main():
 
         elif short_code == 'cc':
                 
-            print("create credentials")
+            print("Create credentials")
+            print("\n")
 
-            print("account_type")
+            print("Enter account type")
             account_type = input()
 
-            print("user name")
+            print("Enter username")
             user_name = input()
 
             print("Enter password")
@@ -116,6 +118,12 @@ def main():
                 print('\n')
                 print("You dont seem to have any credentials saved yet")
                 print('\n')
+
+        elif short_code == 'dl':
+            print ("Enter account type ....")
+            account_type = input()
+
+            del_user_cred(account_type)        
 
                 
 
