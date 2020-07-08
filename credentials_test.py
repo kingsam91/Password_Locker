@@ -24,6 +24,12 @@ class TestCredentials(unittest.TestCase):
         self.create_credentials.save_credentials()  
         self.assertEqual(len(Credentials.credential_list), 1)
 
+    def test_display_credentials(self):
+        '''
+        test case to test displaying credentials
+        '''
+        self.assertEqual(Credentials.display_credentials(), Credentials.credential_list)
+
     def test_init(self):
         '''
         Test if initialized objects are equal and properly initialized
