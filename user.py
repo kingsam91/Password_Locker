@@ -1,6 +1,5 @@
 class User:
 
-
     """
     Class that generates new instances of users
     """
@@ -10,13 +9,13 @@ class User:
     def __init__(self, first,last,email):
         self.first = first
         self.last = last
-        # self.phone_number = phone_number
         self.email = email
 
     def save_user(self):
         """
         save_contact method saves contact objects into user_list
         """
+
         User.user_list.append(self)
 
     @classmethod
@@ -24,4 +23,5 @@ class User:
         """
         method that returns the class list
         """
+
         return cls.user_list

@@ -1,8 +1,8 @@
-class Credential:
-    """
-    a class to generate credential for users
-    """
-    pass
+class Credentials:
+    '''
+    Class to generate credential for users
+    '''
+    
     credential_list = []
 
     def __init__(self, user_name, password, email):
@@ -14,7 +14,7 @@ class Credential:
         """
         save_contact method saves credentials objects into credential list
         """
-        Credential.credential_list.append(self)
+        Credentials.credential_list.append(self)
 
     @classmethod
     def display_credentials(cls):
