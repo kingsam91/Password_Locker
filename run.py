@@ -22,14 +22,14 @@ def save_user(user):
     Function saves user details
     '''
     
-    user.save_user_details()
+    user.save_user()
 
-def create_credentials(user_name,password,email):
+def create_credentials(user_name,password,account_type):
     '''
     Function to create a new credentials
     '''
 
-    new_credentials = Credentials(user_name, password, email)
+    new_credentials = Credentials(user_name, password, account_type)
     return new_credentials
 
 
@@ -52,7 +52,7 @@ def main():
 
     while True:
 
-        print("Use these short codes : cu - create a new user, dp - display user credentials, dl - delete user, exit -exit the user list ")
+        print("Use these short codes : cu - create a new user, cc - create user credentials, dc - display user credentials, dl - delete user, exit -exit the user list ")
 
         short_code = input().lower()
 
@@ -72,6 +72,28 @@ def main():
             print("Email")
             email = input()
 
+            save_user(create_user(first_name,last_name, email))
+            print ('\n')
+            print(f"New user {first_name} {last_name} created")
+            print('\n')
+
+        elif short_code == 'cc':
+                
+            print("create credentials")
+
+            print("account_type")
+            account_type = input()
+
+            print("user name")
+            user_name = input()
+
+            print("Enter password")
+            password = input()
+
+            save_credentials(create_credentials(user_name,password,account_type))
+            print('\n')
+            print(f"New credentials {account_type} {user_name} {password} ")
+            
 
 
 

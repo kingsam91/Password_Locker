@@ -5,10 +5,10 @@ class Credentials:
     
     credential_list = []
 
-    def __init__(self, user_name, password, email):
+    def __init__(self, user_name, password, account_type):
         self.user_name = user_name
         self.password = password
-        self.email = email
+        self.account_type = account_type
 
     def save_credentials(self):
         """
