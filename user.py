@@ -1,11 +1,13 @@
 class User:
-     """
-    a class that generates new instances of users
+
+
+    """
+    Class that generates new instances of users
     """
 
     user_list = []
 
-    def __init__ = (self, first,last,email):
+    def __init__(self, first,last,email):
         self.first = first
         self.last = last
         # self.phone_number = phone_number

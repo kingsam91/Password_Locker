@@ -1,4 +1,9 @@
 #!/usr/bin/env python3.6
+
+def randomString(stringLength=8):
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
+
 def save_user():
     
 def create_user(first,last,email):
