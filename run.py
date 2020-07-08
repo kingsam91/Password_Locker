@@ -55,7 +55,23 @@ def main():
         print("Use these short codes : cp - create a new password, dp - display passwords, dl - delete passwords, ex -exit the password list ")
 
         short_code = input().lower()
-        
+
+        if short_code == "exit":
+            print("Adios...")
+            break
+
+        if short_code == "cu":
+            print("create user")
+
+            print("First name")
+            first_name = input()
+
+            print("Last name")
+            last_name = input()
+            
+            print("Email")
+            email = input()
+
 
 
 
