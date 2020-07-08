@@ -40,7 +40,11 @@ def save_credentials(credentials):
 
     credentials.save_credentials()
 
-# def display_user_cred():
+def display_user_cred():
+    '''
+    Function returns all the saved credentials
+    '''
+    return Credentials.display_credentials()
 
 # def del_user_cred():
 
@@ -94,7 +98,23 @@ def main():
             print('\n')
             print(f"New credentials {account_type} {user_name} {password} ")
             
+        elif short_code == 'dc':
 
+            if display_user_cred():
+ 
+                print("Here is a list of all your credentials")
+                print('\n')
+
+                for credentials in display_user_cred():
+                    print(f"{credentials.account_type}...{credentials.user_name}..{credentials.password}")
+                    # print('\n'
+
+            else:
+                print('\n')
+                print("You dont seem to have any credentials saved yet")
+                print('\n')
+
+                )
 
 
 if __name__ == '__main__':
