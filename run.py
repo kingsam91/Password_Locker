@@ -47,7 +47,15 @@ def save_credentials(credentials):
 
 
 def main():
-    print("dsafdsgf")
+    print("Welcome to password locker.")
+
+
+    while True:
+
+        print("Use these short codes : cp - create a new password, dp - display passwords, dl - delete passwords, ex -exit the password list ")
+
+        short_code = input().lower()
+        
 
 
 
