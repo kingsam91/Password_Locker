@@ -15,7 +15,14 @@ class TestCredentials(unittest.TestCase):
         tearDown method that cleans up after each test case has run.
         '''
 
-        Credentials.credential_list = [] 
+        Credentials.credential_list = []
+
+    def test_save_credentials(self):
+        '''
+        tests saving new credentials 
+        '''
+        self.create_credentials.save_credentials()  
+        self.assertEqual(len(Credentials.credential_list), 1)
 
     def test_init(self):
         '''
