@@ -10,6 +10,13 @@ class TestCredentials(unittest.TestCase):
 
         self.create_credentials = Credentials("kingsam", "1234567", "facebook")
 
+    def tearDown(self):
+        '''
+        tearDown method that cleans up after each test case has run.
+        '''
+
+        Credentials.credential_list = [] 
+
     def test_init(self):
         '''
         Test if initialized objects are equal and properly initialized
@@ -18,6 +25,8 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.create_credentials.user_name, "kingsam")
         self.assertEqual(self.create_credentials.password, "1234567")
         self.assertEqual(self.create_credentials.account_type, "facebook")
+
+   
 
 if __name__ == '__main__':
     unittest.main()            
