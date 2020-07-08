@@ -52,7 +52,7 @@ def main():
 
     while True:
 
-        print("Use these short codes : cp - create a new password, dp - display passwords, dl - delete passwords, ex -exit the password list ")
+        print("Use these short codes : cu - create a new user, dp - display user credentials, dl - delete user, exit -exit the user list ")
 
         short_code = input().lower()
 
