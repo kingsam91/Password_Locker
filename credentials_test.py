@@ -26,9 +26,21 @@ class TestCredentials(unittest.TestCase):
 
     def test_display_credentials(self):
         '''
-        test case to test displaying credentials
+        test case to see if app appends credentials list
         '''
         self.assertEqual(Credentials.display_credentials(), Credentials.credential_list)
+
+    def test_delete_credentials(self):
+        '''
+        test if one can delete credentials
+        '''
+        self.create_credentials.save_credentials()
+        create_credentials = Credentials("Test","user","facebook") # new contact
+        create_credentials.save_credentials()
+
+        self.create_credentials.delete_credentials("facebook")# Deleting a contact object
+        self.assertEqual(len(Credentials.credential_list),1)
+
 
     def test_init(self):
         '''
